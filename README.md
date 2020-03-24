@@ -1,5 +1,6 @@
 # CARRoT
 Replication materials for the paper CARRoT: R Package for Predictive Modelling Adjusted for Events per Variable Rules
+The package itself is available at https://cran.r-project.org/web/packages/CARRoT/index.html
 
 carrot_functions_mod_si.r - the file allowing to compare CARRoT output with the output of the models constituted by only statistically significant predictors
 
