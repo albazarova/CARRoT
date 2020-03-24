@@ -3,11 +3,6 @@ source("carrot_functions_mod_si.r")
 library(car)
 library(afex)
 
-#Note that the results are subject to a partition which is different every time. 
-#Therefore the values obtained by running this code might give values which are slightly different fro those givent in Tables 2-3. 
-#However we anticipate that that difference will have an order of magnitude 10^{-2}
-#Also the ratio between predictive powers obtained by different methods would stay the same up to the second-third decimal place
-
 #To ensure reproducibility we did not use parallel toolbox, however it would normally significantly speed up the process
 
 #uis from the package quantreg, sample size 575
