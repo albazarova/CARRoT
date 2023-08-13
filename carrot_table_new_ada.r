@@ -1,6 +1,6 @@
 
 path1="carrot_functions_mod_si_las.R"
-path2="carrot_functions_rsc.r"
+path2="carrot_functions_rsq.r"
 
   
 source("carrot_functions_mod_si_las_ada.R")
