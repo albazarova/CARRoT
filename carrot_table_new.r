@@ -1,6 +1,6 @@
 
-path1="/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R"
-path2="/Users/alinabazarova/Dropbox/carrot_functions_new.r"
+path1="carrot_functions_mod_si_las.R"
+path2="carrot_functions_rsq.r"
 
   
   
@@ -19,21 +19,21 @@ library(afex)
 #To ensure reproducibility we did not use parallel toolbox, however it would normally significantly speed up the process
 
 #snails from package MASS, sample size 96
-name<-"snails"
-name_p<-"MASS"
-name_s<-"lin"
-ou<-5
-name_o<-paste0("names(",name,")[",ou,"]")
-name_d<-dim(snails[,1:4])
+# name<-"snails"
+# name_p<-"MASS"
+# name_s<-"lin"
+# ou<-5
+# name_o<-paste0("names(",name,")[",ou,"]")
+# name_d<-dim(snails[,1:4])
 
 data(snails, package="MASS")
 
-source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R")
+source("carrot_functions_mod_si_las.R")
 
 set.seed(100)
 c<-regr_ind(snails[,1:4],snails[,5],crv=1000,mode='linear')
 
-source("/Users/alinabazarova/Dropbox/carrot_functions_new.r")
+source("carrot_functions_rsq.r")
 
 set.seed(100)
 c1<-regr_ind(snails[,1:4],snails[,5],crv=1000,mode='linear')
