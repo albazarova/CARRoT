@@ -15,3 +15,5 @@ table3_carrot.r - script to replicate Table 11 from the paper
 
 carrot_table_new.r - script to replicate the results of Tables S1 and S2
 carrot_table_new_ada.r - script to replicate the results of Tables S1 and S2 for stepwise forward selection
+
+License GPL-2
