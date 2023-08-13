@@ -1,9 +1,9 @@
 
-path1="/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R"
-path2="/Users/alinabazarova/Dropbox/carrot_functions_new.r"
+path1="carrot_functions_mod_si_las.R"
+path2="carrot_functions_new.r"
 
   
-source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las_ada.R")
+source("carrot_functions_mod_si_las_ada.R")
 
 
 
@@ -48,7 +48,7 @@ name_d<-dim(uis[,2:9])
 
 data(uis,package="quantreg")
 
-source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R")
+source("carrot_functions_mod_si_las.R")
 
 set.seed(12399)
 c<-regr_ind(uis[,2:9],uis[,10],crv=1000,mode='linear',cutoff=0.5)
@@ -71,7 +71,7 @@ name_o<-paste0("names(",name,")[",ou,"]")
 name_d<-dim(PBG[,2:5])
 
 
-source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R")
+source("carrot_functions_mod_si_las.R")
 
 set.seed(12399)
 c<-regr_ind(PBG[,2:5],PBG[,1],crv=1000,mode='linear',cutoff=0.5)
@@ -90,7 +90,7 @@ ou<-1
 name_o<-paste0("names(",name,")[",ou,"]")
 name_d<-dim(Rabbit[,2:5])
 
-source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R")
+source("carrot_functions_mod_si_las.R")
 
 
 set.seed(12389)
@@ -110,7 +110,7 @@ ou<-2
 name_o<-paste0("names(",name,")[",ou,"]")
 name_d<-dim(kidrecurr[,6:10])
 
-source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R")
+source("carrot_functions_mod_si_las.R")
 
 
 
@@ -131,7 +131,7 @@ ou<-4
 name_o<-paste0("names(",name,")[",ou,"]")
 name_d<-dim(kidrecurr[,6:10])
 
-source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R")
+source("carrot_functions_mod_si_las.R")
 
 
 set.seed(12383);
@@ -152,7 +152,7 @@ ou<-3
 name_o<-paste0("names(",name,")[",ou,"]")
 name_d<-dim(hodg[,c(1:2,5:6)])
 
-source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R")
+source("carrot_functions_mod_si_las.R")
 
 set.seed(12379)
 c<-regr_ind(hodg[,c(1:2,5:6)],hodg[,3],crv=1000,mode='linear',cutoff=0.5)
@@ -172,7 +172,7 @@ ou<-2
 name_o<-paste0("names(",nameƒ,")[",ou,"]")
 name_d<-dim(bmt[,c(8,10,12:22)])
 
-source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R")
+source("carrot_functions_mod_si_las.R")
 
 
 set.seed(12369)
@@ -194,7 +194,7 @@ ou<-5
 name_o<-paste0("names(",name,")[",ou,"]")
 name_d<-dim(glioma[ind,c(2:4,7)])
 
-#source("/Users/alinabazarova/Dropbox/carrot_functions_mod_si_las.R")
+#source("carrot_functions_mod_si_las.R")
 source(path1)
 
 set.seed(2345)
@@ -873,11 +873,11 @@ set.seed(130)
 c3<-regr_ind(cbind(as.data.frame(mpg)[,1:7],as.data.frame(mpg)[,10:11]),as.data.frame(mpg)[,9],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #txhousing from the package ggplot2, sample size 8602
@@ -929,11 +929,11 @@ set.seed(131)
 c3<-regr_ind(cbind(as.data.frame(txhousing)[ind,1:3],as.data.frame(txhousing)[ind,7:8]),as.data.frame(txhousing)[ind,4],1000,mode='linear', Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -966,11 +966,11 @@ c3<-regr_ind(as.data.frame(midwest[,4:20]),as.data.frame(midwest)[,22],1000,mode
 #first line of the output
 #[1] 1.50688997 0.01607700 1.81372543 0.01929520 1.60741481 0.01705375
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #diamonds from the package ggplot2, sample size 54000
@@ -1004,11 +1004,11 @@ set.seed(135)
 c3<-regr_ind(cbind(as.data.frame(diamonds[,1:6]),as.data.frame(diamonds[,8:10])),as.data.frame(diamonds)[,7],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #environmental from the package lattice, sample size 111
@@ -1043,11 +1043,11 @@ set.seed(137)
 c3<-regr_ind(environmental[,2:4],environmental[,1],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #including quadratic terms in the model
@@ -1082,11 +1082,11 @@ c3<-regr_ind(quadr(environmental[,2:4]),environmental[,1],1000,mode='linear',Rsq
 
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Boston from the package MASS, sample size 506
@@ -1118,11 +1118,11 @@ c2<-regr_ind(Boston[,1:13],Boston[,14],1000,mode='linear',Rsq=T)
 set.seed(139)
 c3<-regr_ind(Boston[,1:13],Boston[,14],1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #OME from the package MASS, sample size 1129
@@ -1154,11 +1154,11 @@ c2<-regr_ind(OME[,2:5],OME[,6]/OME[,7]+0.0000001,1000,mode='linear',Rsq=T)
 set.seed(140)
 c3<-regr_ind(OME[,2:5],OME[,6]/OME[,7]+0.0000001,1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Rabbit from the package MASS, sample size 60
@@ -1193,11 +1193,11 @@ set.seed(141)
 c3<-regr_ind(Rabbit[,2:5],Rabbit[,1],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Traffic from the package MASS, sample size 184
@@ -1231,11 +1231,11 @@ set.seed(142)
 c3<-regr_ind(Traffic[,1:3],Traffic[,4],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #UScereal from the package MASS, sample size 65
@@ -1266,11 +1266,11 @@ c2<-regr_ind(UScereal[,2:11],UScereal[,1],1000,mode='linear',Rsq=T)
 set.seed(143)
 c3<-regr_ind(UScereal[,2:11],UScereal[,1],1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #UScrime from the package MASS, sample size 47
@@ -1305,11 +1305,11 @@ c3<-regr_ind(UScrime[,1:15],UScrime[,16],1000,mode='linear',Rsq=T,marg=0.1)
 
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #birthwt from the package MASS, sample size 189
@@ -1341,11 +1341,11 @@ set.seed(145)
 c3<-regr_ind(birthwt[,1:9],birthwt[,10],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -1378,11 +1378,11 @@ c3<-regr_ind(birthwt[,2:9],birthwt[,10],1000,mode='linear',Rsq=T,marg=0.1)
 
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #cabbages from the package MASS, sample size 60
@@ -1417,11 +1417,11 @@ c3<-regr_ind(cabbages[,1:3],cabbages[,4],1000,mode='linear',Rsq=T,marg=0.1)
 
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -1456,11 +1456,11 @@ set.seed(148)
 c3<-regr_ind(coop[,1:3],coop[,4],1000,mode='linear',Rsq=T,marg=0.1)
 #
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #cpus from the package MASS, sample size 209
@@ -1491,11 +1491,11 @@ c2<-regr_ind(cpus[,2:7],cpus[,8],1000,mode='linear',Rsq=T)
 set.seed(149)
 c3<-regr_ind(cpus[,2:7],cpus[,8],1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -1530,11 +1530,11 @@ c3<-regr_ind(epil[,2:9],epil[,1],1000,mode='linear',Rsq=T,marg=0.1)
 
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 # #fgl from the package MASS, sample size 214
@@ -1575,11 +1575,11 @@ set.seed(153)
 c3<-regr_ind(housing[,2:5],housing[,1],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #nlschools from the package MASS, sample size 2287
@@ -1614,11 +1614,11 @@ set.seed(155)
 c3<-regr_ind(nlschools[,2:6],nlschools[,1],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #nlschools from the package MASS, sample size 30
@@ -1650,11 +1650,11 @@ c2<-regr_ind(immer[,1:3],immer[,4],1000,mode='linear',Rsq=T)
 set.seed(154)
 c3<-regr_ind(immer[,1:3],immer[,4],1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #oats from the package MASS, sample size 72
@@ -1688,11 +1688,11 @@ set.seed(156)
 c3<-regr_ind(oats[,1:3],oats[,4],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 # #painters from the package MASS, sample size 72
@@ -1733,11 +1733,11 @@ c2<-regr_ind(petrol[,1:5],petrol[,6],1000,mode='linear',Rsq=T)
 set.seed(158)
 c3<-regr_ind(petrol[,1:5],petrol[,6],1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #quine from the package MASS, sample size 146
@@ -1768,11 +1768,11 @@ c2<-regr_ind(quine[,1:4],quine[,5],1000,mode='linear',Rsq=T)
 set.seed(159)
 c3<-regr_ind(quine[,1:4],quine[,5],1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #road from the package MASS, sample size 26
@@ -1803,11 +1803,11 @@ c2<-regr_ind(road[,3:6],road[,2],1000,mode='linear',Rsq=T)
 set.seed(160)
 c3<-regr_ind(road[,3:6],road[,2],1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 # #including quadratic terms
@@ -1848,11 +1848,11 @@ set.seed(162)
 c3<-regr_ind(Gasoline[,2:6],Gasoline[,1],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 # #including quadratic terms
@@ -1891,11 +1891,11 @@ c2<-regr_ind(MathAchieve[,c(2:4,6)],MathAchieve[,5],1000,mode='linear',Rsq=T)
 set.seed(164)
 c3<-regr_ind(MathAchieve[,c(2:4,6)],MathAchieve[,5],1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -1927,11 +1927,11 @@ c2<-regr_ind(MathAchSchool[,c(2:4,6:7)],MathAchSchool[,5],1000,mode='linear',Rsq
 set.seed(165)
 c3<-regr_ind(MathAchSchool[,c(2:4,6:7)],MathAchSchool[,5],1000,mode='linear',Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -1963,11 +1963,11 @@ c2<-regr_ind(Milk[,2:4],Milk[,1],1000,mode='linear', Rsq=T)
 set.seed(167)
 c3<-regr_ind(Milk[,2:4],Milk[,1],1000,mode='linear', Rsq=T,marg=0.1)
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Phenobarb from the package nlme, sample size 744
@@ -2013,11 +2013,11 @@ set.seed(168)
 c3<-regr_ind(Phenobarb[ind,2:5],Phenobarb[ind,6],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #including the quadratic terms
@@ -2051,11 +2051,11 @@ set.seed(169)
 c3<-regr_ind(cbind(quadr(cbind(Phenobarb[ind,c(2,5)],as.numeric(levels(Phenobarb[ind,3])[Phenobarb[ind,3]]))),Phenobarb[ind,4]),Phenobarb[ind,6],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{q(Phenobarb)} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{q(Phenobarb)} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #same dataset, different outcome
@@ -2099,11 +2099,11 @@ set.seed(171)
 c3<-regr_ind(Phenobarb[ind,2:5],Phenobarb[ind,7],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #including quadratic terms
@@ -2137,11 +2137,11 @@ set.seed(172)
 c3<-regr_ind(cbind(quadr(cbind(Phenobarb[ind,c(2,5)],as.numeric(levels(Phenobarb[ind,3])[Phenobarb[ind,3]]))),Phenobarb[ind,4]),Phenobarb[ind,7],1000,mode='linear', Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Quinidine from the package nlme, sample size 1471
@@ -2189,11 +2189,11 @@ set.seed(170)
 c3<-regr_ind(Quinidine[ind,c(2,6:14)],Quinidine[ind,4],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Remifentanil from the package nlme, sample size 2107
@@ -2242,11 +2242,11 @@ set.seed(173)
 c3<-regr_ind(Remifentanil[ind,c(3,5:12)],Remifentanil[ind,4],1000,mode='linear', Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Soybean from the package nlme, sample size 412
@@ -2280,11 +2280,11 @@ set.seed(174)
 c3<-regr_ind(Soybean[,2:4],Soybean[,5],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Wheat from the package nlme, sample size 48
@@ -2318,11 +2318,11 @@ set.seed(175)
 c3<-regr_ind(cbind(as.numeric(Wheat[,1]),Wheat[,2:3]),Wheat[,4],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #including quadratic terms
@@ -2356,11 +2356,11 @@ set.seed(176)
 c3<-regr_ind(quadr(cbind(as.numeric(levels(Wheat[,1])[Wheat[,1]]),Wheat[,2:3])),Wheat[,4],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Wheat2 from the package nlme, sample size 224
@@ -2393,11 +2393,11 @@ set.seed(177)
 c3<-regr_ind(cbind(as.numeric(Wheat2[,1]),Wheat2[,c(2,4:5)]),Wheat2[,3],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #including quadratic terms
@@ -2428,11 +2428,11 @@ set.seed(178)
 c3<-regr_ind(cbind(quadr(cbind(as.numeric(levels(Wheat2[,1])[Wheat2[,1]]),Wheat2[,4:5])),Wheat2[,2]),Wheat2[,3],1000,mode='linear',parallel=TRUE,cores=7,Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -2466,11 +2466,11 @@ set.seed(180)
 c3<-regr_ind(tips[,c(1,3:7)],tips[,2],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #car.test.frame from the package rpart, sample size 60
@@ -2515,11 +2515,11 @@ set.seed(181)
 c3<-regr_ind(car.test.frame[ind,c(2,4:8)],car.test.frame[ind,1],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -2565,11 +2565,11 @@ set.seed(182)
 c3<-regr_ind(cu.summary[ind,2:5],cu.summary[ind,1],100,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #cancer from the package survival, sample size 228
@@ -2614,11 +2614,11 @@ set.seed(184)
 c3<-regr_ind(cancer[ind,c(1,3:10)],cancer[ind,2],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #cgd from the package survival, sample size 117
@@ -2651,11 +2651,11 @@ set.seed(185)
 c3<-regr_ind(cgd[,c(13,4:12)],cgd[,14],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #flchain from the package survival, sample size 7874
@@ -2697,12 +2697,12 @@ set.seed(186)
 c3<-regr_ind(flchain[ind,c(1:8)],flchain[ind,9]+0.0000000001,1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
+# sink(paste("Table1.tex"),append=T)
 
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #the same dataset, different predictors
@@ -2747,11 +2747,11 @@ set.seed(187)
 c3<-regr_ind(flchain[ind,c(11,1:8)],flchain[ind,9]+0.0000000001,1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #logan from the package survival, sample size 838
@@ -2784,11 +2784,11 @@ set.seed(188)
 c3<-regr_ind(logan[,c(1,2,4)],logan[,3],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #retinopathy from the package survival, sample size 394
@@ -2822,11 +2822,11 @@ set.seed(189)
 c3<-regr_ind(retinopathy[,2:8],retinopathy[,9],1000,mode='linear',Rsq=T,marg=0.1)
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c1[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][5],2)),cat("/"),cat(round(c[[1]][6],2)),cat("$ & $"),cat(round(c[[1]][7],2)),cat("/"),cat(round(c[[1]][8],2)),cat("$ & $"),cat(round(c2[[1]][3],2)),cat("/"),cat(round(c2[[1]][4],2)),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c2[[1]][2],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c3[[1]][2],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #best significant lasso emp rsq rsq+marg
@@ -2894,11 +2894,11 @@ set.seed(12398)
 c30<-regr_ind(bacteria[,2:6],bacteria[,1],crv=1000,mode='binary',cutoff=0.5,objfun='roc',Rsq=T,marg=0.05,maxw=3)#first line of the output
 #[1] 0.6674006 0.7513193
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -2965,11 +2965,11 @@ c30<-regr_ind(Pima.te[,1:7],Pima.te[,8],crv=1000,mode='binary',cutoff=0.5,objfun
 #first line of the output
 #[1] 0.8605648 0.8553927
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 #pneumon from the package KMsurv, sample size 3470, 73 less likely outcomes
 
@@ -3032,11 +3032,11 @@ c30<-regr_ind(pneumon[,c(1,3:12)],pneumon[,2],crv=1000,mode='binary',cutoff=0.5,
 #first line of the output
 #[1] 0.9210679 0.9040106
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #KosteckiDillon from the package carData, sample size 4152, 1486 less likely outcomes
@@ -3100,11 +3100,11 @@ c30<-regr_ind(KosteckiDillon[,c(2:7,9)],KosteckiDillon[,8],crv=1000,mode='binary
 #first line of the output
 #[1] 0.6665914 0.6624804
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #burn from the package KMsurv, sample size 154, 48 less likely outcomes
@@ -3170,11 +3170,11 @@ c30<-regr_ind(burn[,c(2:12,14:16)],burn[,18],crv=1000,mode='binary',cutoff=0.5, 
 #first line of the output
 #[1] 0.7101131 0.5991186
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #beaver from the package datasets, sample size 100, 38 less likely outcomes
@@ -3239,11 +3239,11 @@ c30<-regr_ind(beaver[,1:3],beaver[,4],1000,cutoff=0.5,mode='binary',objfun='roc'
 #first line of the output
 #[1] 0.9955691 0.9881696
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #Aids2 from the package MASS, sample size 2843, 1082 least likely outcomes
@@ -3307,11 +3307,11 @@ c30<-regr_ind(Aids2[,c(1,3:4,7)],Aids2[,5],1000,cutoff=0.5,mode='binary',objfun=
 #first line of the output
 #[1] 0.9990844 0.9986687
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 #Pima.tr from the package MASS, sample size 200, 68 least likely outcomes
 
@@ -3377,11 +3377,11 @@ c30<-regr_ind(Pima.tr[,1:7],Pima.tr[,8],1000,cutoff=0.5,mode='binary',Rsq=T,marg
 #[1] 0.8377254 0.8263776
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #biopsy from the package MASS, sample size 699
@@ -3459,11 +3459,11 @@ c30<-regr_ind(biopsy[ind,2:10],biopsy[ind,11],1000,cutoff=0.5,mode='binary',objf
 #first line of the output
 #[1] 0.8377254 0.8263776
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #channing from the package boot, sample size 462, 176 least likely outcomes
@@ -3528,11 +3528,11 @@ c30<-regr_ind(channing[,1:4],channing[,5],1000,cutoff=0.5,mode='binary',objfun='
 #first line of the output
 #[1] 0.8377254 0.8263776
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 
@@ -3591,11 +3591,11 @@ c30<-regr_ind(cbind(channing[,1],quadr(channing[,2:4])),channing[,5],1000,cutoff
 #first line of the output
 #[1] 0.7858406
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #nodal from the package boot, sample size 53, 20 least likely outcomes
@@ -3663,11 +3663,11 @@ c30<-regr_ind(nodal[,3:7],nodal[,2],1000,cutoff=0.5,mode='binary',objfun='roc',m
 #first line of the output
 #[1] 0.6910533 0.7781677
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 name<-"qu_nodal"
@@ -3732,11 +3732,11 @@ c30<-regr_ind(quadr(nodal[,3:7]),nodal[,2],1000,cutoff=0.5,mode='binary',objfun=
 #[1] NA
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #urine from the package boot, sample size 79, we use 77, 33 least likely outcomes
@@ -3796,11 +3796,11 @@ set.seed(210)
 #[1] 0.8468434 0.8437506
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #infert from the package datasets, sample size 248, 83 least likely outcomes
@@ -3868,11 +3868,11 @@ c30<-regr_ind(infert[,c(1:4,6:8)],infert[,5],1000,cutoff=0.5,mode='binary',objfu
 #[1] 0.7674035 0.6975847
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #aSAH from the package pROC, sample size 113, 41 less likely outcomes
@@ -3934,11 +3934,11 @@ c30<-regr_ind(aSAH[,c(3:7)],aSAH[,2],1000,cutoff=0.5,mode='binary',objfun='roc',
 #first line of the output
 #[1] 0.7832593 0.7782922
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #kyphosis from the package rpart, sample size 81, 17 least likely outcomes
@@ -4002,11 +4002,11 @@ c30<-regr_ind(kyphosis[,2:4],kyphosis[,1],1000,cutoff=0.5,mode='binary',objfun='
 #[1] 0.8183897 0.8180974
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 name<-"qu_kyphosis"
 name_p<-"rpart"
@@ -4063,11 +4063,11 @@ c30<-regr_ind(quadr(kyphosis[,2:4]),kyphosis[,1],1000,cutoff=0.5,mode='binary',o
 #first line of the output
 #[1] NA
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #stagec from the package rpart, sample size 146
@@ -4146,11 +4146,11 @@ c30<-regr_ind(stagec[ind,c(1,3:8)],stagec[ind,2],1000,cutoff=0.5,mode='binary',o
 #first line of the output
 #[1] 0.8869770 0.8819919
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #bladder from the package survival, sample size 340, 112 least likely outcomes 
@@ -4217,11 +4217,11 @@ c30<-regr_ind(bladder[,2:5],bladder[,6],1000,cutoff=0.5,mode='binary',objfun='ro
 #[1] 0.7714052 0.7630878
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #including the quadratic terms
@@ -4280,11 +4280,11 @@ c30<-regr_ind(quadr(bladder[,2:5]),bladder[,6],1000,cutoff=0.5,mode='binary',obj
 #first line of the output
 #[1] 0.8093026 0.7703889
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #bladder2 from the package survival, sample size 178, 66 least likely outcomes
@@ -4348,11 +4348,11 @@ c30<-regr_ind(bladder2[,2:6],bladder2[,7],100,cutoff=0.5,mode='binary',objfun='r
 
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 #cancer from the package survival, sample size 228
 data(cancer,package="survival")
@@ -4426,11 +4426,11 @@ c30<-regr_ind(cancer[ind,4:10],cancer[ind,3]-1,1000,cutoff=0.5,mode='binary',obj
 #first line of the output
 #[1] 0.6666318 0.6434980
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #cgd from the package survival, sample size 203, 76 least likely outcomes
@@ -4493,11 +4493,11 @@ c30<-regr_ind(cgd[,c(4:11,13,15)],cgd[,16],1000,cutoff=0.5,mode='binary',objfun=
 #[1] 0.8143154 0.7987056
 
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #colon from the package survival, sample size 1858
@@ -4567,11 +4567,11 @@ c30<-regr_ind(colon[ind,c(3:9,13:15)],colon[ind,16]-1,1000,cutoff=0.5,mode='bina
 #first line of the output
 #[1] 0.5825579 0.5825579
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #crabs from the package MASS, sample size 200, 100 of each outcome
@@ -4636,11 +4636,11 @@ c30<-regr_ind(crabs[,c(3,5:8)],crabs[,1],100,cutoff=0.5,mode='binary',objfun='ro
 #first line of the output
 #[1] 0.9989594 0.9958940
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #quine from the package MASS, sample size 146, 63 least likely outcomes
@@ -4708,11 +4708,11 @@ c30<-regr_ind(quine[,c(1:3,5)],quine[,4],1000,cutoff=0.5,mode='binary',objfun='r
 #first line of the output
 #[1] 0.8083812 0.7787639
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #jasa1 from the package survival, sample size 170, 75 least likely outcomes
@@ -4776,11 +4776,11 @@ c30<-regr_ind(jasa1[,c(2:3,5:8)],jasa1[,4],1000,cutoff=0.5,mode='binary',objfun=
 #first line of the output
 #[1] 0.8187166 0.7484923
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #mgus2 from the package survival, sample size 1384
@@ -4857,11 +4857,11 @@ c30<-regr_ind(mgus2[ind,2:8],mgus2[ind,11],1000,cutoff=0.5,mode='binary',objfun=
 #first line of the output
 #[1] 0.8426302 0.8393732
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #nwtco from the package survival, sample size 4028, 571 least likely outcomes
@@ -4927,11 +4927,11 @@ c30<-regr_ind(nwtco[,c(2:5,7:8)],nwtco[,6],1000,cutoff=0.5,mode='binary',objfun=
 #first line of the output
 #[1] 0.9664795 0.9584666
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #retinopathy from the package survival, sample size 394, 155 least likely outcomes
@@ -4997,11 +4997,11 @@ c30<-regr_ind(retinopathy[,c(2:7,9)],retinopathy[,8],1000,cutoff=0.5,mode='binar
 #first line of the output
 #[1] 0.8865818 0.8789591
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c1[[1]][1],2)),cat("/"),cat(round(c10[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("/"),cat(round(c0[[1]][2],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("/"),cat(round(c0[[1]][3],2)),cat("$ & $"),cat(round(c2[[1]][2],2)),cat("/-"),cat("$ & $"),cat(round(c2[[1]][1],2)),cat("/"),cat(round(c20[[1]][1],2)),cat("$ & $"),cat(round(c3[[1]][1],2)),cat("/"),cat(round(c30[[1]][1],2)),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 ############################################################################################
@@ -5024,11 +5024,11 @@ c<-regr_ind(iris[,1:4],iris[,5],1000,cutoff=0.5,mode='multin')
 #first line of the output
 #[1] 0.9689067 0.2160667 0.9690000
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 #Melanoma from the package MASS, sample size 205, 14 least likely outcomes
 
@@ -5046,11 +5046,11 @@ c<-regr_ind(Melanoma[,3:7],Melanoma[,2],100,cutoff=0.5,mode='multin')
 #first line of the output
 #[1] 0.2828571 0.6471429 0.1780952
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 #painters from the package MASS, sample size 54, 15 likely outcomes
 
@@ -5080,11 +5080,11 @@ set.seed(259)
 c<-regr_ind(painters[,1:4],p,1000,cutoff=0.5,mode='multin')
 #first line of the output
 #[1] 0.5468333 0.4015000 0.6283333
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 name<-"q(painters)"
@@ -5100,11 +5100,11 @@ c<-regr_ind(quadr(painters[,1:4]),p,1000,cutoff=0.5,mode='multin')
 
 #first line of the output
 #[1] 0.5715000 0.3988333 0.5793333
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 
 #solder from the package survival, sample size 720, 240 of each outcome
@@ -5123,11 +5123,11 @@ c<-regr_ind(solder[,2:6],solder[,1],1000,cutoff=0.5,mode='multin')
 #first line of the output
 #[1] 0.5319722 0.2791944 0.5188472
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 #bladder1 from the package survival, sample size 294, 29 least likely outcomes
 
@@ -5147,11 +5147,11 @@ c<-regr_ind(bladder1[,2:7],bladder1[,8],1000,cutoff=0.5,mode='multin')
 #first line of the output
 #[1] 0.8249667 0.6452000 0.7850667
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 #pbc from the package survival, sample size 418
 
@@ -5183,11 +5183,11 @@ c<-regr_ind(pbc[ind,c(5:6,10:11,13,18:20)],pbc[ind,3],1000,cutoff=0.5,mode='mult
 #first line of the output
 #[1] 0.7207305 0.5590500 0.7187500
 
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 
 #transplant from the package survival, sample size 815
 
@@ -5220,11 +5220,11 @@ set.seed(264)
 c<-regr_ind(transplant[ind[ind1],1:5],transplant[ind[ind1],6],1000,cutoff=0.5,mode='multin')
 #first line of the output
 #[1] 0.8743307 0.8141316 0.8490000
-sink(paste("Table1.tex"),append=T)
-cat(paste0("\n"))
-cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
-cat(paste0("\n"))
-sink()
+# sink(paste("Table1.tex"),append=T)
+# cat(paste0("\n"))
+# cat(paste0(cat("\\texttt{"),cat(name),cat("} (\\bf{"),cat(name_p),cat("}) &\\texttt{"),cat(name_s),cat("} &\\texttt{"),cat(eval(parse(text=name_o))),cat("} &,$"),cat(round(c[[1]][1],2)),cat("$ & $"),cat(round(c[[1]][3],2)),cat("$ & $"),cat(round(c[[1]][4],2)),cat("$ & $"),cat(round(c[[1]][2],2)),cat("$ & $"),cat("-"),cat("$ & $"),cat("-"),cat("$ & $"),cat(name_d[2]),cat("$ &"),cat(name_d[1]),cat("\\"),cat("\\")))
+# cat(paste0("\n"))
+# sink()
 #################
 
 set.seed(258)
