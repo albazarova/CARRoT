@@ -1,4 +1,5 @@
-
+library(nnet)
+library(doParallel)
 
 #'Turning a non-numeric variable into a numeric one
 #'
