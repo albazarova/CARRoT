@@ -6,9 +6,9 @@ carrot_function_rsq.r - the original CARRoT script. Dependencies: doParallel, nn
 
 carrot_functions_mod_si_las.r - the file allowing to compare CARRoT output with the output of the models constituted by only statistically significant predictors and lasso regression. Dependencies: car, afex, nnet, doParallel
 
-carrot_functions_mod_si_las_ada.r - the file allowing to compare CARRoT output with the output of the models constituted by only statistically significant predictors and adaptive lasso regression. Dependencies: car, afex, nnet, doParallel, glmnet
+carrot_functions_mod_si_las_ada.r - the file allowing to compare CARRoT output with the output of the models constituted by only statistically significant predictors and adaptive lasso regression. Dependencies: car, afex, glmnet, doParallel, nnet, tidyverse, caret
 
-carrot_functions_mod_step_las.r - the file allowing to compare CARRoT output with the output of the models constituted by onlystepwise forward selection based on Akaike Information Criteria. Dependencies:car, afex, nnet, doParallel
+carrot_functions_mod_step_las.r - the file allowing to compare CARRoT output with the output of the models constituted by onlystepwise forward selection based on Akaike Information Criteria. Dependencies: car, afex, glmnet, doParallel, nnet, tidyverse, caret, leaps, MASS
 
 
 table3_carrot.r - script to replicate Table 11 from the paper. Dependencies: same as for carrot_function_rsq.r plus the packages containing the datasets required for reproduction (listed in Table 11 of the paper)
