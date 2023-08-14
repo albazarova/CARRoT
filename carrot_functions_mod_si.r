@@ -1,5 +1,7 @@
 library(car)
 library(afex)
+library(nnet)
+library(doParallel)
 
 #This set of functions is ientical to the original one except the functions cross_val and regr_ind, where the function of computing and displaying the predictive power achieved by all significant predictors is included
 #Only the modified parts of cross-val and regr_ind are commented
