@@ -10,6 +10,7 @@ source("carrot_functions_mod_si_las_ada.R")
 
 library(car)
 library(afex)
+library(glmnet)
 
 #Note that the results are subject to a partition which is different every time. 
 #Therefore the values obtained by running this code might give values which are slightly different fro those givent in Tables 2-3. 
