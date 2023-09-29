@@ -1,6 +1,7 @@
 # CARRoT
 CARRoT: R package for predictive modelling by means of regression adjusted for multiple regularisation methods
 The package itself is available at https://cran.r-project.org/web/packages/CARRoT/index.html
+Github mirror of the package is https://github.com/cran/CARRoT
 
 carrot_function_rsq.r - the original CARRoT script. Dependencies: doParallel, nnet
 
